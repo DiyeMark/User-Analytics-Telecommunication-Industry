@@ -1,0 +1,19 @@
+
+name: Run Unit Test
+on:
+  push:
+    branches:
+    - main
+jobs:
+  run-test-on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: install-dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: run-tests
+        run: |
+          python -m unittest
