@@ -3,7 +3,7 @@ from streamlit_dashboard import user_overview_analysis_page
 # from streamlit_dashboard import user_experience
 # from streamlit_dashboard  import user_satisfaction
 import streamlit as st
-from multiapp import MultiApp
+from scripts.multiapp import MultiApp
 
 st.set_page_config(page_title="User Analytics in the Telecommunication Industry", layout="wide")
 
